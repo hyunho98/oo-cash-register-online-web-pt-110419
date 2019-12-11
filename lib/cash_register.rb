@@ -6,11 +6,12 @@ class CashRegister
     @total = 0
     @discount = discount
     @items = []
+    @itemHolder = []
   end
 
   def add_item(title, price, quantity = 1)
-    @itemHolder << price
-    @itemHolder << quantity
+    @itemHolder[0] = price
+    @itemHolder[1] = quantity
     quantity.times {
       @items << title
     }
@@ -29,6 +30,6 @@ class CashRegister
 
   def void_last_transaction
     @total -= @itemHolder[0] * @itemHolder[1]
-  end
+
 
 end
