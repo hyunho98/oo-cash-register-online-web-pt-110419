@@ -1,6 +1,6 @@
 class CashRegister
   attr_accessor :total, :discount
-  @items = []
+  @items = Array.new
 
   def initialize(discount = 0)
     @total = 0
