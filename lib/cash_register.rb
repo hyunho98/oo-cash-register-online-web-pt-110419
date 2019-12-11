@@ -30,6 +30,6 @@ class CashRegister
 
   def void_last_transaction
     @total -= @itemHolder[0] * @itemHolder[1]
-
+  end
 
 end
